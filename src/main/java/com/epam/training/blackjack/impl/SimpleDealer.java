@@ -24,10 +24,9 @@ public class SimpleDealer implements Dealer {
 
     @Override
     public Card nextCard() {
-        ++position;
         if (position == cards.size()){
             return null;
         }
-        return cards.get(position);
+        return cards.get(position++);
     }
 }

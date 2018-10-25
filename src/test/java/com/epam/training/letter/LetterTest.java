@@ -19,25 +19,20 @@ public class LetterTest {
 
     @Mock
     private Reader reader;
-
     private Writer writer = new ConsoleWriter(System.out);
-
     @Mock
     private LetterGenerator letterGenerator;
-
     private Letter game;
 
     @Before
     public void initClass(){
         when(reader.readLetter()).thenReturn('a').thenReturn('g').thenReturn('z').thenReturn('k');
         when(letterGenerator.getRandomLetter()).thenReturn('k');
-
         game = new Letter(reader, writer, letterGenerator);
     }
 
     @Test
     public void start() {
-
          game.start();
 
          verify(letterGenerator, times(1)).getRandomLetter();
