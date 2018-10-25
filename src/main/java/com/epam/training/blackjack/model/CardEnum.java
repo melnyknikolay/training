@@ -1,6 +1,8 @@
 package com.epam.training.blackjack.model;
 
-public enum Card {
+import com.epam.training.blackjack.api.Card;
+
+public enum CardEnum implements Card {
     TWO("Two", 2),
     THREE("Three", 3),
     FOUR("four", 4),
@@ -18,18 +20,19 @@ public enum Card {
     private String name;
     private int weight;
 
-    Card(String name, int weight) {
+    CardEnum(String name, int weight) {
         this.name = name;
         this.weight = weight;
     }
 
+    @Override
     public int getWeight() {
         return weight;
     }
 
     @Override
     public String toString() {
-        return "Card{" +
+        return "CardEnum{" +
                 "name='" + name + '\'' +
                 ", weight=" + weight +
                 '}';

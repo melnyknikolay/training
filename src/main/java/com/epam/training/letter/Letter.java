@@ -39,9 +39,6 @@ public class Letter {
     }
 
     private int compare(char letter, char randomLetter) {
-        return (letter - randomLetter) == 0 ? 0
-                :
-                (letter - randomLetter) > 0 ? 1
-                        : -1;
+        return Integer.compare(letter - randomLetter, 0);
     }
 }

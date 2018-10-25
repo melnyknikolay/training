@@ -1,7 +1,8 @@
 package com.epam.training.blackjack.impl.player;
 
+import com.epam.training.blackjack.api.Card;
 import com.epam.training.blackjack.api.Player;
-import com.epam.training.blackjack.model.Card;
+import com.epam.training.blackjack.model.CardEnum;
 
 import java.util.Arrays;
 import java.util.LinkedList;

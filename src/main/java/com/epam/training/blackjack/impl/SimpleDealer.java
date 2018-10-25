@@ -1,18 +1,19 @@
 package com.epam.training.blackjack.impl;
 
-import com.epam.training.blackjack.model.Card;
+import com.epam.training.blackjack.api.Card;
+import com.epam.training.blackjack.model.CardEnum;
 import com.epam.training.blackjack.api.Dealer;
 
 import java.util.*;
 
 public class SimpleDealer implements Dealer {
-    private final List<Card> cards = new LinkedList<Card>();
+    private final List<Card> cards = new LinkedList<>();
     private int position = 0;
     {
-        cards.addAll(Arrays.asList(Card.values()));
-        cards.addAll(Arrays.asList(Card.values()));
-        cards.addAll(Arrays.asList(Card.values()));
-        cards.addAll(Arrays.asList(Card.values()));
+        cards.addAll(Arrays.asList(CardEnum.values()));
+        cards.addAll(Arrays.asList(CardEnum.values()));
+        cards.addAll(Arrays.asList(CardEnum.values()));
+        cards.addAll(Arrays.asList(CardEnum.values()));
     }
 
     @Override
